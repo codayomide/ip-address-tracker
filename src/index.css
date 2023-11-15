@@ -8,3 +8,19 @@
 * {
   font-family: 'Rubik', sans-serif;
 }
+
+.location-info {
+  @apply mb-4 sm:w-[20%];
+}
+
+.location-info:last-child {
+  @apply mb-0;
+}
+
+.location-info h4 {
+  @apply mb-1 text-darkGray uppercase text-xs;
+}
+
+.location-info h3 {
+  @apply font-medium text-lg;
+}
