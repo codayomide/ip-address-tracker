@@ -1,8 +1,19 @@
+import LocationInfo from "./components/LocationInfo";
+import SearchBar from "./components/SearchBar";
+
 function App() {
   return (
-    <div className="app">
+    <main className="app">
+      <section>
+        <h1>IP Address Tracker</h1>
+
+        <SearchBar />
+
+        <LocationInfo />
+      </section>
+
       
-    </div>
+    </main>
   );
 }
 
