@@ -10,11 +10,15 @@
 }
 
 .location-info {
-  @apply mb-4 sm:w-[20%];
+  @apply lg:my-2 md:w-[22%];
 }
 
 .location-info:last-child {
   @apply mb-0;
+}
+
+.location-info.left-border {
+  @apply md:border-l md:border-darkGray md:pl-4;
 }
 
 .location-info h4 {
@@ -22,5 +26,5 @@
 }
 
 .location-info h3 {
-  @apply font-medium text-lg;
+  @apply font-medium text-lg lg:text-2xl;
 }
