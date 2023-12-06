@@ -1,6 +1,6 @@
 const Map = () => {
   return (
-    <section className="h-[60%] sm:h-[70%]">Map</section>
+    <section className="h-[60%] sm:h-[70%]"></section>
   );
 }
  
