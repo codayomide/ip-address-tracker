@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 const SearchBar = ({ setData, setLoading, setError }) => {
   const [ipAddress, setIpAddress] = useState("");
@@ -35,6 +35,21 @@ const SearchBar = ({ setData, setLoading, setError }) => {
     fetchData();
   };
 
+  const inputRef = useRef(null);
+  const [isTextSelected, setIsTextSelected] = useState(false);
+
+  const handleInputClick = () => {
+    if (!isTextSelected) {
+      // Using the select method to highlight the text in the input field
+      inputRef.current.select();
+    } else {
+      // Clear the selection
+      inputRef.current.setSelectionRange(0, 0);
+    }
+
+    // Toggle the selection state
+    setIsTextSelected(!isTextSelected);
+  };
   return (
     <form className="flex text-sm sm:text-lg mt-4 mo-md:mt-8 w-[95%] mo-sm:w-[90%] mo-md:w-[80%] sm:w-[60%] md:w-[50%] lg:w-[45%]">
       <input
@@ -43,6 +58,8 @@ const SearchBar = ({ setData, setLoading, setError }) => {
         className="px-5 py-3 rounded-l-xl w-full placeholder:invisible mo-sm:placeholder:visible focus:outline-none outline-none"
         value={ipAddress}
         onChange={(e) => setIpAddress(e.target.value)}
+        ref={inputRef}
+        onClick={handleInputClick}
       />
       <button
         className="bg-veryDarkGray hover:bg-darkGray transition-colors ease-linear duration-75 rounded-r-xl px-5 py-3"
