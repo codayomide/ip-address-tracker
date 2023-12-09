@@ -28,3 +28,11 @@
 .location-info h3 {
   @apply font-medium text-lg lg:text-2xl;
 }
+
+.leaflet-container {
+  @apply h-full;
+}
+
+.leaflet-top.leaflet-left {
+  @apply hidden;
+}

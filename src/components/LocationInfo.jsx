@@ -5,7 +5,7 @@ const LocationInfo = ({ loading, data, error }) => {
     <>
     {loading && <div>Loading...</div>}
     {error && <div>Error!!</div>}
-      <div className="bg-neutralWhite text-center py-5 md:py-6 shadow-lg w-[80%] mo-lg:w-[65%] sm:w-[55%] md:w-[85%] xl:w-[85%] rounded-lg mt-4 md:mt-12 md:px-6 md:text-left md:flex md:justify-between">
+      <div className="bg-neutralWhite text-center py-5 md:py-6 shadow-lg w-[80%] mo-lg:w-[65%] sm:w-[55%] md:w-[85%] xl:w-[85%] rounded-lg mt-4 md:mt-12 md:px-6 md:text-left md:flex md:justify-between absolute top-[50%] sm:top-[60%] z-[600]">
         <div className="location-info">
           <h4>IP Address</h4>
           <h3>{data ? data.ip : "192.212.174.101"}</h3>

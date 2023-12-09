@@ -40,14 +40,10 @@ const SearchBar = ({ setData, setLoading, setError }) => {
 
   const handleInputClick = () => {
     if (!isTextSelected) {
-      // Using the select method to highlight the text in the input field
       inputRef.current.select();
     } else {
-      // Clear the selection
       inputRef.current.setSelectionRange(0, 0);
     }
-
-    // Toggle the selection state
     setIsTextSelected(!isTextSelected);
   };
   return (
