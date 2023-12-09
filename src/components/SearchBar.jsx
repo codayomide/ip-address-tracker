@@ -1,12 +1,12 @@
-/* eslint-disable react/prop-types */
-
 import { useRef, useState } from "react";
+// import { useMapEvents } from "react-leaflet";
 
 const SearchBar = ({ setData, setLoading, setError }) => {
   const [ipAddress, setIpAddress] = useState("");
+  const inputRef = useRef(null);
+  const [isTextSelected, setIsTextSelected] = useState(false);
 
   const apiKey = import.meta.env.VITE_REACT_APP_IP_API_KEY;
-  // const apiUrl = `https://geo.ipify.org/api/v1?apiKey=${apiKey}&ipAddress=${ipAddress}`;
 
   const fetchData = () => {
     const apiUrl = `https://geo.ipify.org/api/v2/country,city?apiKey=${apiKey}&ipAddress=${ipAddress}`;
@@ -30,13 +30,21 @@ const SearchBar = ({ setData, setLoading, setError }) => {
       });
   };
 
+  // const map = useMapEvents({
+  //   locationfound(e) {
+  //     map.flyTo(e.latlng, map.getZoom());
+  //   },
+  // });
+
+  // const handleLocate = () => {
+  //   map.locate();
+  // };
+
   const handleSearch = (e) => {
     e.preventDefault()
-    fetchData();
+    fetchData()
+    // .then(handleLocate());
   };
-
-  const inputRef = useRef(null);
-  const [isTextSelected, setIsTextSelected] = useState(false);
 
   const handleInputClick = () => {
     if (!isTextSelected) {
@@ -46,6 +54,7 @@ const SearchBar = ({ setData, setLoading, setError }) => {
     }
     setIsTextSelected(!isTextSelected);
   };
+
   return (
     <form className="flex text-sm sm:text-lg mt-4 mo-md:mt-8 w-[95%] mo-sm:w-[90%] mo-md:w-[80%] sm:w-[60%] md:w-[50%] lg:w-[45%]">
       <input
