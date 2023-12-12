@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+// import { useMap } from "react-leaflet";
 // import { useMapEvents } from "react-leaflet";
 
 const SearchBar = ({ setData, setLoading, setError }) => {
@@ -30,20 +31,9 @@ const SearchBar = ({ setData, setLoading, setError }) => {
       });
   };
 
-  // const map = useMapEvents({
-  //   locationfound(e) {
-  //     map.flyTo(e.latlng, map.getZoom());
-  //   },
-  // });
-
-  // const handleLocate = () => {
-  //   map.locate();
-  // };
-
   const handleSearch = (e) => {
     e.preventDefault()
     fetchData()
-    // .then(handleLocate());
   };
 
   const handleInputClick = () => {
