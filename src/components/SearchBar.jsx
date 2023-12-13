@@ -1,6 +1,4 @@
 import { useRef, useState } from "react";
-// import { useMap } from "react-leaflet";
-// import { useMapEvents } from "react-leaflet";
 
 const SearchBar = ({ setData, setLoading, setError }) => {
   const [ipAddress, setIpAddress] = useState("");
