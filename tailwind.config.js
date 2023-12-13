@@ -16,8 +16,7 @@ export default {
       },
     },
     backgroundImage: {
-      "image-mobile-bg": "url('/assets/images/pattern-bg-mobile.png')",
-      "image-desktop-bg": "url('/assets/images/pattern-bg-desktop.png')",
+      imageDesktopBg: "url('/assets/images/pattern-bg-desktop.png')",
     },
   },
   plugins: [],

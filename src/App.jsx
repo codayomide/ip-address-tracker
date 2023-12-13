@@ -10,7 +10,7 @@ function App() {
 
   return (
     <main className="app h-screen w-full">
-      <section className="bg-image-desktop-bg bg-cover h-[40%] sm:h-[30%] flex flex-col items-center pt-8 relative">
+      <section className="bg-imageDesktopBg bg-cover h-[40%] sm:h-[30%] flex flex-col items-center pt-8 relative">
         <h1 className="text-neutralWhite font-medium text-2xl">
           IP Address Tracker
         </h1>
