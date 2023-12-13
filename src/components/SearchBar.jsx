@@ -70,7 +70,7 @@ const SearchBar = ({ setData, setLoading, setError }) => {
         className="bg-veryDarkGray hover:bg-darkGray transition-colors ease-linear duration-75 rounded-r-xl px-5 py-3"
         onClick={handleSearch}
       >
-        <img src="src/assets/images/icon-arrow.svg" alt="" />
+        <img src="./assets/images/icon-arrow.svg" alt="" />
       </button>
     </form>
   );

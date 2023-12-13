@@ -4,7 +4,7 @@ import { Marker, Popup, useMap } from "react-leaflet";
 
 const LocationMarker = ({ data }) => {
   const markerIcon = new Icon({
-    iconUrl: "src/assets/images/icon-location.svg",
+    iconUrl: "./assets/images/icon-location.svg",
     iconSize: [38, 38],
   });
 
